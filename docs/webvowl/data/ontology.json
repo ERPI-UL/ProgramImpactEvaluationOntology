@@ -1,0 +1,792 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "fr" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/pieo" ],
+    "title" : {
+      "en" : "Ontology for Program Impact Evaluation"
+    },
+    "iri" : "http://purl.org/pieo",
+    "version" : "1.0",
+    "description" : {
+      "en" : "This ontology defines a vocabulary that describe the different concept related to program impact evaluation. It is used as basement for creating a digial system that would assist policy-maker when designing policy program and identify the adapted indicators."
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Ontology for Program Impact Evaluation",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/pieo#TheoryOfChange",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TheoryOfChange",
+      "en" : "theory of change",
+      "fr" : "théorie du changement"
+    },
+    "comment" : {
+      "en" : "This describes how the project is expected to achieve its intended results.",
+      "fr" : "Cela décrit comment le projet est censé atteindre les résultats escomptés."
+    },
+    "id" : "0"
+  }, {
+    "iri" : "http://purl.org/pieo#activity",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "activity",
+      "en" : "activity",
+      "fr" : "activité"
+    },
+    "comment" : {
+      "en" : "Actions taken or work performed through which inputs, such as funds, technical assistance, and other types of resources, are mobilized to produce specific outputs, such as money spent, textbooks distributed, or number of participants enrolled in an employment program.",
+      "fr" : "Actions entreprises ou travaux réalisés par lesquels des intrants, tels que des fonds, une assistance technique et d'autres types de ressources, sont mobilisés pour produire des résultats spécifiques, tels que l'argent dépensé, les manuels scolaires distribués ou le nombre de participants inscrits à un programme d'emploi."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/pieo#ProcessEvaluation",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProcessEvaluation",
+      "en" : "Process evaluation",
+      "fr" : "Evaluation des processus"
+    },
+    "comment" : {
+      "en" : "It is an approach that focus on how a program is implemented and operates, assessing whether it conforms to its original design and documenting its development and operation.",
+      "fr" : "Il s'agit d'une approche qui se concentre sur la manière dont un programme est mis en œuvre et fonctionne, en évaluant s'il est conforme à sa conception initiale et en documentant son développement et son fonctionnement. (Gertler et al., 2016 - Impact Evaluation in Practice)"
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://purl.org/pieo#element_chaine_resultats",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "element_chaine_resultats",
+      "en" : "Elements of a Results Chain",
+      "fr" : "Elements de la chaine de résultats"
+    },
+    "subClasses" : [ "5", "6", "7", "8", "1" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://purl.org/pieo#QuantitativeIndicator",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeIndicator"
+    },
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://purl.org/pieo#QuestionType",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuestionType",
+      "en" : "evaluation question type",
+      "fr" : "type de question d'évaluation"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/pieo#descriptive_question",
+      "baseIri" : "http://purl.org/pieo",
+      "comment" : {
+        "en" : "It asks about what is taking place. They are concerned with processes, conditions, organizational relationships, and stakeholder views.",
+        "fr" : "Elle pose des questions sur ce qui se passe. Elles portent sur les processus, les conditions, les relations organisationnelles et les points de vue des parties prenantes."
+      },
+      "labels" : {
+        "IRI-based" : "descriptive_question",
+        "en" : "descriptive question",
+        "fr" : "question descriptive"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#Cause-and-effect_question",
+      "baseIri" : "http://purl.org/pieo",
+      "comment" : {
+        "en" : "It focuses on attribution. They ask about what difference the intervention makes to outcomes.",
+        "fr" : "Elle est axée sur l'attribution. Elles demandent quelle est la différence entre l'intervention et les résultats."
+      },
+      "labels" : {
+        "IRI-based" : "Cause-and-effect_question",
+        "en" : "cause-and-effect question",
+        "fr" : "question de cause à effet"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#normative_question",
+      "baseIri" : "http://purl.org/pieo",
+      "comment" : {
+        "en" : "It compares what is taking place to what should be  taking place.\nThey assess activities and whether or not targets are accomplished. Normative questions can apply to inputs, activities, and outputs.",
+        "fr" : "Elle compare ce qui se passe à ce qui devrait se passer.\nElles permettent d'évaluer les activités et de déterminer si les objectifs sont atteints ou non. Les questions normatives peuvent s'appliquer aux intrants, aux activités et aux produits."
+      },
+      "labels" : {
+        "IRI-based" : "normative_question",
+        "en" : "normative question",
+        "fr" : "question normative"
+      }
+    } ],
+    "comment" : {
+      "en" : "An evaluation is trying to answer to a question. Evaluations can address three types of questions.",
+      "fr" : "Une évaluation tente de répondre à une question. Les évaluations peuvent répondre à trois types de questions."
+    },
+    "id" : "14"
+  }, {
+    "iri" : "http://purl.org/pieo#Partner",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Partner",
+      "en" : "Partner",
+      "fr" : "Partenaire"
+    },
+    "id" : "15",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://purl.org/pieo#ResultsChain",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResultsChain",
+      "en" : "results chain",
+      "fr" : "chaine de résultats"
+    },
+    "comment" : {
+      "en" : "Sets out the program logic by explaining how the development objective is to be achieved. It articulates the sequence of inputs, activities, and outputs that are expected to improve outcomes.",
+      "fr" : "Définit la logique du programme en expliquant comment l'objectif de développement doit être atteint. Il articule la séquence des intrants, des activités et des extrants qui sont censés améliorer les résultats."
+    },
+    "id" : "17"
+  }, {
+    "iri" : "http://purl.org/pieo#meso",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "meso"
+    },
+    "id" : "18",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://purl.org/pieo#FinalOutcome",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FinalOutcome"
+    },
+    "id" : "5",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/pieo#stakeholder",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "stakeholder",
+      "en" : "Stakeholder",
+      "fr" : "Partie prenante"
+    },
+    "subClasses" : [ "15" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://purl.org/pieo#finalite",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "finalite"
+    },
+    "id" : "23"
+  }, {
+    "iri" : "http://purl.org/pieo#ImpactEvaluation",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactEvaluation",
+      "en" : "Impact evaluation",
+      "fr" : "Etude d'impact"
+    },
+    "id" : "30",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://purl.org/pieo#EvaluationType",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EvaluationType",
+      "en" : "evaluation type",
+      "fr" : "type d'évaluation"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/pieo#ex_ante_simulation",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "ex_ante_simulation"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#mixed_method_evaluation",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "mixed_method_evaluation"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#monitoring",
+      "baseIri" : "http://purl.org/pieo",
+      "comment" : {
+        "en" : "It lets verify whether activities are being implemented as planned. Monitoring is critical to checking that a beneficiary actually participates in the program and that a nonbeneficiary does not participate.",
+        "fr" : "Il permet de vérifier si les activités sont mises en œuvre comme prévu. Le suivi est essentiel pour vérifier qu'un bénéficiaire participe effectivement au programme et qu'un non-bénéficiaire n'y participe pas."
+      },
+      "labels" : {
+        "IRI-based" : "monitoring",
+        "en" : "monitoring",
+        "fr" : "suivi (monitoring)"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#impact_evaluation",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "impact_evaluation"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#evaluation",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "evaluation"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#process_evaluation",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "process_evaluation",
+        "en" : "process evaluation",
+        "fr" : "évaluation des processus"
+      }
+    } ],
+    "id" : "31"
+  }, {
+    "iri" : "http://purl.org/pieo#micro",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "micro"
+    },
+    "id" : "34",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://purl.org/pieo#inputs",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "inputs",
+      "en" : "inputs",
+      "fr" : "intrant"
+    },
+    "comment" : {
+      "en" : "The financial, human, and material resources used for the intervention.",
+      "fr" : "Les ressources financières, humaines et matérielles utilisées pour l'intervention."
+    },
+    "id" : "8",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "22",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://purl.org/pieo#Program",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Program",
+      "en" : "Program",
+      "fr" : "Programme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/pieo#SIRIUS",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "SIRIUS"
+      }
+    } ],
+    "id" : "10"
+  }, {
+    "iri" : "http://purl.org/pieo#EvaluationApproach",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EvaluationApproach",
+      "en" : "Evaluation approach",
+      "fr" : "démarche d'évaluation"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/pieo#SIRIUS_eval",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "SIRIUS_eval"
+      }
+    } ],
+    "subClasses" : [ "30", "3" ],
+    "comment" : {
+      "en" : "It is an approach that aims to evaluate the implementation of a program.",
+      "fr" : "C'est une démarche qui a pour objectif d'évaluer la mise en oeuvre d'un programme."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://purl.org/pieo#DataType",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataType",
+      "en" : "Defines the different types of data that can be collected by an indicator or assessment process.",
+      "fr" : "type de données"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/pieo#quantitative_data",
+      "baseIri" : "http://purl.org/pieo",
+      "comment" : {
+        "en" : "They are numerical measurements and are commonly associated with scales or metrics.",
+        "fr" : "Il s'agit de mesures numériques et elles sont généralement associées à des échelles ou à des mesures."
+      },
+      "labels" : {
+        "IRI-based" : "quantitative_data",
+        "en" : "quantitative data",
+        "fr" : "donnée quantitative"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#qualitative_data",
+      "baseIri" : "http://purl.org/pieo",
+      "comment" : {
+        "en" : "They are expressed not in numbers, but rather by means of language or sometimes images.",
+        "fr" : "Ils ne s'expriment pas par des chiffres, mais plutôt par le biais du langage ou parfois d'images."
+      },
+      "labels" : {
+        "IRI-based" : "qualitative_data",
+        "en" : "qualitative data",
+        "fr" : "donnée qualitative"
+      }
+    }, {
+      "iri" : "http://purl.org/pieo#cumulative_data",
+      "baseIri" : "http://purl.org/pieo",
+      "labels" : {
+        "IRI-based" : "cumulative_data"
+      }
+    } ],
+    "comment" : {
+      "fr" : "Définie les différents types de données qui peuvent être collectés par un indicateur ou une démarche d'évaluation."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "http://purl.org/pieo#Output",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Output",
+      "en" : "output",
+      "fr" : "production"
+    },
+    "comment" : {
+      "en" : "The tangible products, goods, and services that are produced (supplied) directly by a program’s activities. The delivery of outputs is directly under the control of the program-implementing agency. The use of outputs by beneficiaries contributes to changes in outcomes.",
+      "fr" : "Les produits tangibles, les biens et les services qui sont produits (fournis) directement par les activités d'un programme. La livraison des extrants est directement sous le contrôle de l'agence chargée de la mise en œuvre du programme. L'utilisation des extrants par les bénéficiaires contribue aux changements dans les résultats."
+    },
+    "id" : "6",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/pieo#Outcome",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Outcome",
+      "en" : "outcome",
+      "fr" : "résultat"
+    },
+    "id" : "7",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/pieo#Indicator",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Indicator",
+      "en" : "indicator",
+      "fr" : "indicateur"
+    },
+    "subClasses" : [ "12", "43" ],
+    "comment" : {
+      "en" : "A variable that measures a phenomenon of interest to the evaluation team. The phenomenon can be an input, an output, an outcome, a characteristic, or an attribute.",
+      "fr" : "Une variable qui mesure un phénomène intéressant l'équipe d'évaluation. Le phénomène peut être un intrant, un extrant, un résultat, une caractéristique ou un attribut."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://purl.org/pieo#QualitativeIndicator",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualitativeIndicator"
+    },
+    "id" : "43",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://purl.org/pieo#environment",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "environment"
+    },
+    "subClasses" : [ "29", "34", "18" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://purl.org/pieo#macro",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "macro"
+    },
+    "id" : "29",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://purl.org/pieo#objectif",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "objectif"
+    },
+    "id" : "46"
+  }, {
+    "iri" : "http://purl.org/pieo#but",
+    "baseIri" : "http://purl.org/pieo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "but"
+    },
+    "id" : "47"
+  } ],
+  "property" : [ {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/pieo#takePlaceIn",
+    "baseIri" : "http://purl.org/pieo",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "takePlaceIn",
+      "en" : "take place in",
+      "fr" : "s'effectue dans"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Relation qui lie un programme avec son environement économique.",
+      "fr" : "Relation qui lie un programme avec son environement économique."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://purl.org/pieo#useDataType",
+    "baseIri" : "http://purl.org/pieo",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "useDataType",
+      "en" : "use data type",
+      "fr" : "utilise le type de données"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "A relationship that links an evaluation approach with a type of data. It defines on which type of data an evaluation approach is based.",
+      "fr" : "Relation qui lie une démarche d'évaluation avec un type de données. Ce definie sur quel type de données une démarche d'évaluation se base."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://purl.org/pieo#measure",
+    "baseIri" : "http://purl.org/pieo",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "measure",
+      "en" : "measure",
+      "fr" : "mesure"
+    },
+    "domain" : "22",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://purl.org/pieo#isPartOf",
+    "baseIri" : "http://purl.org/pieo",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "is part of",
+      "fr" : "fait partie de"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Relationship that links a stakeholder with its economic environment.",
+      "fr" : "Relation qui lie une partie prenante avec son environement économique."
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://purl.org/pieo#collect",
+    "baseIri" : "http://purl.org/pieo",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "collect",
+      "en" : "collect",
+      "fr" : "collecte"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Relationship that links an indicator with a type of data. This defines the type of data collected by the indicator.",
+      "fr" : "Relation qui lie un indicateur avec un type de données. Cela définie le type de données collecté par l'indicateur."
+    },
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://purl.org/pieo#evaluate",
+    "baseIri" : "http://purl.org/pieo",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "evaluate",
+      "en" : "evaluate",
+      "fr" : "évalue"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relationship that links an evaluation approach with a program.",
+      "fr" : "Relation qui lie une démarche d'évaluation avec un programme."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "range" : "16",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "11",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "11",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "11",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "range" : "2",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "4",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "13",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "2",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://purl.org/pieo#defineLogicOf",
+    "baseIri" : "http://purl.org/pieo",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "defineLogicOf",
+      "en" : "define logic of",
+      "fr" : "définit le logique de"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Relationship that links a chain of results with a program. The chain of results how the program's development objectives will be achieved.",
+      "fr" : "Relation qui lie une chaine de résultats avec un programme. La chaine de résultats comment les objectifs de développement du programme seront atteints."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  } ]
+}

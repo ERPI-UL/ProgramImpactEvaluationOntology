@@ -1,0 +1,670 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/pieo#qualitative_data"
+    }, {
+      "@id" : "http://purl.org/pieo#quantitative_data"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/pieo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology defines a vocabulary that describe the different concept related to program impact evaluation. It is used as basement for creating a digial system that would assist policy-maker when designing policy program and identify the adapted indicators."
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for Program Impact Evaluation"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://purl.org/pieo/1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#Cause-and-effect_question",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#QuestionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Elle est axée sur l'attribution. Elles demandent quelle est la différence entre l'intervention et les résultats."
+  }, {
+    "@language" : "en",
+    "@value" : "It focuses on attribution. They ask about what difference the intervention makes to outcomes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cause-and-effect question"
+  }, {
+    "@language" : "fr",
+    "@value" : "question de cause à effet"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#DataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Définie les différents types de données qui peuvent être collectés par un indicateur ou une démarche d'évaluation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Defines the different types of data that can be collected by an indicator or assessment process."
+  }, {
+    "@language" : "en",
+    "@value" : "data type"
+  }, {
+    "@language" : "fr",
+    "@value" : "type de données"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#EvaluationApproach",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "C'est une démarche qui a pour objectif d'évaluer la mise en oeuvre d'un programme."
+  }, {
+    "@language" : "en",
+    "@value" : "It is an approach that aims to evaluate the implementation of a program."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Evaluation approach"
+  }, {
+    "@language" : "fr",
+    "@value" : "démarche d'évaluation"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#EvaluationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "evaluation type"
+  }, {
+    "@language" : "fr",
+    "@value" : "type d'évaluation"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#FinalOutcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#element_chaine_resultats"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#ImpactEvaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Etude d'impact"
+  }, {
+    "@language" : "en",
+    "@value" : "Impact evaluation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationApproach"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#Indicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A variable that measures a phenomenon of interest to the evaluation team. The phenomenon can be an input, an output, an outcome, a characteristic, or an attribute."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une variable qui mesure un phénomène intéressant l'équipe d'évaluation. Le phénomène peut être un intrant, un extrant, un résultat, une caractéristique ou un attribut."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "indicateur"
+  }, {
+    "@language" : "en",
+    "@value" : "indicator"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#Outcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "outcome"
+  }, {
+    "@language" : "fr",
+    "@value" : "résultat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#element_chaine_resultats"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#Output",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Les produits tangibles, les biens et les services qui sont produits (fournis) directement par les activités d'un programme. La livraison des extrants est directement sous le contrôle de l'agence chargée de la mise en œuvre du programme. L'utilisation des extrants par les bénéficiaires contribue aux changements dans les résultats."
+  }, {
+    "@language" : "en",
+    "@value" : "The tangible products, goods, and services that are produced (supplied) directly by a program’s activities. The delivery of outputs is directly under the control of the program-implementing agency. The use of outputs by beneficiaries contributes to changes in outcomes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "output"
+  }, {
+    "@language" : "fr",
+    "@value" : "production"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#element_chaine_resultats"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#Partner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Partenaire"
+  }, {
+    "@language" : "en",
+    "@value" : "Partner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#stakeholder"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#ProcessEvaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Il s'agit d'une approche qui se concentre sur la manière dont un programme est mis en œuvre et fonctionne, en évaluant s'il est conforme à sa conception initiale et en documentant son développement et son fonctionnement. (Gertler et al., 2016 - Impact Evaluation in Practice)"
+  }, {
+    "@language" : "en",
+    "@value" : "It is an approach that focus on how a program is implemented and operates, assessing whether it conforms to its original design and documenting its development and operation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Evaluation des processus"
+  }, {
+    "@language" : "en",
+    "@value" : "Process evaluation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationApproach"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#Program",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Program"
+  }, {
+    "@language" : "fr",
+    "@value" : "Programme"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#QualitativeIndicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#Indicator"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#QuantitativeIndicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#Indicator"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#QuestionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An evaluation is trying to answer to a question. Evaluations can address three types of questions."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une évaluation tente de répondre à une question. Les évaluations peuvent répondre à trois types de questions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "evaluation question type"
+  }, {
+    "@language" : "fr",
+    "@value" : "type de question d'évaluation"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#ResultsChain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Définit la logique du programme en expliquant comment l'objectif de développement doit être atteint. Il articule la séquence des intrants, des activités et des extrants qui sont censés améliorer les résultats."
+  }, {
+    "@language" : "en",
+    "@value" : "Sets out the program logic by explaining how the development objective is to be achieved. It articulates the sequence of inputs, activities, and outputs that are expected to improve outcomes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "chaine de résultats"
+  }, {
+    "@language" : "en",
+    "@value" : "results chain"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#SIRIUS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#Program"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#SIRIUS_eval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/pieo#evaluate" : [ {
+    "@id" : "http://purl.org/pieo#SIRIUS"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationApproach"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#TheoryOfChange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Cela décrit comment le projet est censé atteindre les résultats escomptés."
+  }, {
+    "@language" : "en",
+    "@value" : "This describes how the project is expected to achieve its intended results."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "theory of change"
+  }, {
+    "@language" : "fr",
+    "@value" : "théorie du changement"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Actions entreprises ou travaux réalisés par lesquels des intrants, tels que des fonds, une assistance technique et d'autres types de ressources, sont mobilisés pour produire des résultats spécifiques, tels que l'argent dépensé, les manuels scolaires distribués ou le nombre de participants inscrits à un programme d'emploi."
+  }, {
+    "@language" : "en",
+    "@value" : "Actions taken or work performed through which inputs, such as funds, technical assistance, and other types of resources, are mobilized to produce specific outputs, such as money spent, textbooks distributed, or number of participants enrolled in an employment program."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "activity"
+  }, {
+    "@language" : "fr",
+    "@value" : "activité"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#element_chaine_resultats"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#but",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/pieo#collect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Relation qui lie un indicateur avec un type de données. Cela définie le type de données collecté par l'indicateur."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship that links an indicator with a type of data. This defines the type of data collected by the indicator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/pieo#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "collect"
+  }, {
+    "@language" : "fr",
+    "@value" : "collecte"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/pieo#DataType"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#cumulative_data",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#DataType"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#defineLogicOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Relation qui lie une chaine de résultats avec un programme. La chaine de résultats comment les objectifs de développement du programme seront atteints."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship that links a chain of results with a program. The chain of results how the program's development objectives will be achieved."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/pieo#ResultsChain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "define logic of"
+  }, {
+    "@language" : "fr",
+    "@value" : "définit le logique de"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/pieo#Program"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#descriptive_question",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#QuestionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Elle pose des questions sur ce qui se passe. Elles portent sur les processus, les conditions, les relations organisationnelles et les points de vue des parties prenantes."
+  }, {
+    "@language" : "en",
+    "@value" : "It asks about what is taking place. They are concerned with processes, conditions, organizational relationships, and stakeholder views."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "descriptive question"
+  }, {
+    "@language" : "fr",
+    "@value" : "question descriptive"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#element_chaine_resultats",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Elements de la chaine de résultats"
+  }, {
+    "@language" : "en",
+    "@value" : "Elements of a Results Chain"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#environment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/pieo#evaluate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Relation qui lie une démarche d'évaluation avec un programme."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship that links an evaluation approach with a program."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationApproach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "evaluate"
+  }, {
+    "@language" : "fr",
+    "@value" : "évalue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/pieo#Program"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#evaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationType"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#ex_ante_simulation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationType"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#finalite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/pieo#impact_evaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationType"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#inputs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Les ressources financières, humaines et matérielles utilisées pour l'intervention."
+  }, {
+    "@language" : "en",
+    "@value" : "The financial, human, and material resources used for the intervention."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "inputs"
+  }, {
+    "@language" : "fr",
+    "@value" : "intrant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#element_chaine_resultats"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Relation qui lie une partie prenante avec son environement économique."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship that links a stakeholder with its economic environment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/pieo#stakeholder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "fait partie de"
+  }, {
+    "@language" : "en",
+    "@value" : "is part of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/pieo#environment"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#macro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#environment"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#measure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "measure"
+  }, {
+    "@language" : "fr",
+    "@value" : "mesure"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#meso",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#environment"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#micro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/pieo#environment"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#mixed_method_evaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationType"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#monitoring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Il permet de vérifier si les activités sont mises en œuvre comme prévu. Le suivi est essentiel pour vérifier qu'un bénéficiaire participe effectivement au programme et qu'un non-bénéficiaire n'y participe pas."
+  }, {
+    "@language" : "en",
+    "@value" : "It lets verify whether activities are being implemented as planned. Monitoring is critical to checking that a beneficiary actually participates in the program and that a nonbeneficiary does not participate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "monitoring"
+  }, {
+    "@language" : "fr",
+    "@value" : "suivi (monitoring)"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#normative_question",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#QuestionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Elle compare ce qui se passe à ce qui devrait se passer.\nElles permettent d'évaluer les activités et de déterminer si les objectifs sont atteints ou non. Les questions normatives peuvent s'appliquer aux intrants, aux activités et aux produits."
+  }, {
+    "@language" : "en",
+    "@value" : "It compares what is taking place to what should be  taking place.\nThey assess activities and whether or not targets are accomplished. Normative questions can apply to inputs, activities, and outputs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "normative question"
+  }, {
+    "@language" : "fr",
+    "@value" : "question normative"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#objectif",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/pieo#process_evaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "process evaluation"
+  }, {
+    "@language" : "fr",
+    "@value" : "évaluation des processus"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#qualitative_data",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#DataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Ils ne s'expriment pas par des chiffres, mais plutôt par le biais du langage ou parfois d'images."
+  }, {
+    "@language" : "en",
+    "@value" : "They are expressed not in numbers, but rather by means of language or sometimes images."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "donnée qualitative"
+  }, {
+    "@language" : "en",
+    "@value" : "qualitative data"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#quantitative_data",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/pieo#DataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Il s'agit de mesures numériques et elles sont généralement associées à des échelles ou à des mesures."
+  }, {
+    "@language" : "en",
+    "@value" : "They are numerical measurements and are commonly associated with scales or metrics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "donnée quantitative"
+  }, {
+    "@language" : "en",
+    "@value" : "quantitative data"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#stakeholder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Partie prenante"
+  }, {
+    "@language" : "en",
+    "@value" : "Stakeholder"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#takePlaceIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation qui lie un programme avec son environement économique."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui lie un programme avec son environement économique."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/pieo#Program"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "s'effectue dans"
+  }, {
+    "@language" : "en",
+    "@value" : "take place in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/pieo#environment"
+  } ]
+}, {
+  "@id" : "http://purl.org/pieo#useDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship that links an evaluation approach with a type of data. It defines on which type of data an evaluation approach is based."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui lie une démarche d'évaluation avec un type de données. Ce definie sur quel type de données une démarche d'évaluation se base."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/pieo#EvaluationApproach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "use data type"
+  }, {
+    "@language" : "fr",
+    "@value" : "utilise le type de données"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/pieo#DataType"
+  } ]
+} ]

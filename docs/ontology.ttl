@@ -1,0 +1,390 @@
+@prefix : <http://purl.org/pieo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/pieo#> .
+
+<http://purl.org/pieo> rdf:type owl:Ontology ;
+                        owl:versionIRI <http://purl.org/pieo/1.0> ;
+                        <http://purl.org/dc/elements/1.1/description> "This ontology defines a vocabulary that describe the different concept related to program impact evaluation. It is used as basement for creating a digial system that would assist policy-maker when designing policy program and identify the adapted indicators."@en ;
+                        <http://purl.org/dc/elements/1.1/title> "Ontology for Program Impact Evaluation"@en ;
+                        owl:versionInfo "1.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/pieo#collect
+:collect rdf:type owl:ObjectProperty ;
+         rdfs:domain :Indicator ;
+         rdfs:range :DataType ;
+         rdfs:comment "Relation qui lie un indicateur avec un type de données. Cela définie le type de données collecté par l'indicateur."@fr ,
+                      "Relationship that links an indicator with a type of data. This defines the type of data collected by the indicator."@en ;
+         rdfs:label "collect"@en ,
+                    "collecte"@fr .
+
+
+###  http://purl.org/pieo#defineLogicOf
+:defineLogicOf rdf:type owl:ObjectProperty ;
+               rdfs:domain :ResultsChain ;
+               rdfs:range :Program ;
+               rdfs:comment "Relation qui lie une chaine de résultats avec un programme. La chaine de résultats comment les objectifs de développement du programme seront atteints."@fr ,
+                            "Relationship that links a chain of results with a program. The chain of results how the program's development objectives will be achieved."@en ;
+               rdfs:label "define logic of"@en ,
+                          "définit le logique de"@fr .
+
+
+###  http://purl.org/pieo#evaluate
+:evaluate rdf:type owl:ObjectProperty ;
+          rdfs:domain :EvaluationApproach ;
+          rdfs:range :Program ;
+          rdfs:comment "Relation qui lie une démarche d'évaluation avec un programme."@fr ,
+                       "Relationship that links an evaluation approach with a program."@en ;
+          rdfs:label "evaluate"@en ,
+                     "évalue"@fr .
+
+
+###  http://purl.org/pieo#isPartOf
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :stakeholder ;
+          rdfs:range :environment ;
+          rdfs:comment "Relation qui lie une partie prenante avec son environement économique."@fr ,
+                       "Relationship that links a stakeholder with its economic environment."@en ;
+          rdfs:label "fait partie de"@fr ,
+                     "is part of"@en .
+
+
+###  http://purl.org/pieo#measure
+:measure rdf:type owl:ObjectProperty ;
+         rdfs:label "measure"@en ,
+                    "mesure"@fr .
+
+
+###  http://purl.org/pieo#takePlaceIn
+:takePlaceIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :Program ;
+             rdfs:range :environment ;
+             rdfs:comment "Relation qui lie un programme avec son environement économique."@en ,
+                          "Relation qui lie un programme avec son environement économique."@fr ;
+             rdfs:label "s'effectue dans"@fr ,
+                        "take place in"@en .
+
+
+###  http://purl.org/pieo#useDataType
+:useDataType rdf:type owl:ObjectProperty ;
+             rdfs:domain :EvaluationApproach ;
+             rdfs:range :DataType ;
+             rdfs:comment "A relationship that links an evaluation approach with a type of data. It defines on which type of data an evaluation approach is based."@en ,
+                          "Relation qui lie une démarche d'évaluation avec un type de données. Ce definie sur quel type de données une démarche d'évaluation se base."@fr ;
+             rdfs:label "use data type"@en ,
+                        "utilise le type de données"@fr .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/pieo#DataType
+:DataType rdf:type owl:Class ;
+          rdfs:comment "Définie les différents types de données qui peuvent être collectés par un indicateur ou une démarche d'évaluation."@fr ;
+          rdfs:label "Defines the different types of data that can be collected by an indicator or assessment process."@en ,
+                     "data type"@en ,
+                     "type de données"@fr .
+
+
+###  http://purl.org/pieo#EvaluationApproach
+:EvaluationApproach rdf:type owl:Class ;
+                    rdfs:comment "C'est une démarche qui a pour objectif d'évaluer la mise en oeuvre d'un programme."@fr ,
+                                 "It is an approach that aims to evaluate the implementation of a program."@en ;
+                    rdfs:label "Evaluation approach"@en ,
+                               "démarche d'évaluation"@fr .
+
+
+###  http://purl.org/pieo#EvaluationType
+:EvaluationType rdf:type owl:Class ;
+                rdfs:label "evaluation type"@en ,
+                           "type d'évaluation"@fr .
+
+
+###  http://purl.org/pieo#FinalOutcome
+:FinalOutcome rdf:type owl:Class ;
+              rdfs:subClassOf :element_chaine_resultats .
+
+
+###  http://purl.org/pieo#ImpactEvaluation
+:ImpactEvaluation rdf:type owl:Class ;
+                  rdfs:subClassOf :EvaluationApproach ;
+                  rdfs:label "Etude d'impact"@fr ,
+                             "Impact evaluation"@en .
+
+
+###  http://purl.org/pieo#Indicator
+:Indicator rdf:type owl:Class ;
+           rdfs:comment "A variable that measures a phenomenon of interest to the evaluation team. The phenomenon can be an input, an output, an outcome, a characteristic, or an attribute."@en ,
+                        "Une variable qui mesure un phénomène intéressant l'équipe d'évaluation. Le phénomène peut être un intrant, un extrant, un résultat, une caractéristique ou un attribut."@fr ;
+           rdfs:label "indicateur"@fr ,
+                      "indicator"@en .
+
+
+###  http://purl.org/pieo#Outcome
+:Outcome rdf:type owl:Class ;
+         rdfs:subClassOf :element_chaine_resultats ;
+         rdfs:label "outcome"@en ,
+                    "résultat"@fr .
+
+
+###  http://purl.org/pieo#Output
+:Output rdf:type owl:Class ;
+        rdfs:subClassOf :element_chaine_resultats ;
+        rdfs:comment "Les produits tangibles, les biens et les services qui sont produits (fournis) directement par les activités d'un programme. La livraison des extrants est directement sous le contrôle de l'agence chargée de la mise en œuvre du programme. L'utilisation des extrants par les bénéficiaires contribue aux changements dans les résultats."@fr ,
+                     "The tangible products, goods, and services that are produced (supplied) directly by a program’s activities. The delivery of outputs is directly under the control of the program-implementing agency. The use of outputs by beneficiaries contributes to changes in outcomes."@en ;
+        rdfs:label "output"@en ,
+                   "production"@fr .
+
+
+###  http://purl.org/pieo#Partner
+:Partner rdf:type owl:Class ;
+         rdfs:subClassOf :stakeholder ;
+         rdfs:label "Partenaire"@fr ,
+                    "Partner"@en .
+
+
+###  http://purl.org/pieo#ProcessEvaluation
+:ProcessEvaluation rdf:type owl:Class ;
+                   rdfs:subClassOf :EvaluationApproach ;
+                   rdfs:comment "Il s'agit d'une approche qui se concentre sur la manière dont un programme est mis en œuvre et fonctionne, en évaluant s'il est conforme à sa conception initiale et en documentant son développement et son fonctionnement. (Gertler et al., 2016 - Impact Evaluation in Practice)"@fr ,
+                                "It is an approach that focus on how a program is implemented and operates, assessing whether it conforms to its original design and documenting its development and operation."@en ;
+                   rdfs:label "Evaluation des processus"@fr ,
+                              "Process evaluation"@en .
+
+
+###  http://purl.org/pieo#Program
+:Program rdf:type owl:Class ;
+         rdfs:label "Program"@en ,
+                    "Programme"@fr .
+
+
+###  http://purl.org/pieo#QualitativeIndicator
+:QualitativeIndicator rdf:type owl:Class ;
+                      rdfs:subClassOf :Indicator .
+
+
+###  http://purl.org/pieo#QuantitativeIndicator
+:QuantitativeIndicator rdf:type owl:Class ;
+                       rdfs:subClassOf :Indicator .
+
+
+###  http://purl.org/pieo#QuestionType
+:QuestionType rdf:type owl:Class ;
+              rdfs:comment "An evaluation is trying to answer to a question. Evaluations can address three types of questions."@en ,
+                           "Une évaluation tente de répondre à une question. Les évaluations peuvent répondre à trois types de questions."@fr ;
+              rdfs:label "evaluation question type"@en ,
+                         "type de question d'évaluation"@fr .
+
+
+###  http://purl.org/pieo#ResultsChain
+:ResultsChain rdf:type owl:Class ;
+              rdfs:comment "Définit la logique du programme en expliquant comment l'objectif de développement doit être atteint. Il articule la séquence des intrants, des activités et des extrants qui sont censés améliorer les résultats."@fr ,
+                           "Sets out the program logic by explaining how the development objective is to be achieved. It articulates the sequence of inputs, activities, and outputs that are expected to improve outcomes."@en ;
+              rdfs:label "chaine de résultats"@fr ,
+                         "results chain"@en .
+
+
+###  http://purl.org/pieo#TheoryOfChange
+:TheoryOfChange rdf:type owl:Class ;
+                rdfs:comment "Cela décrit comment le projet est censé atteindre les résultats escomptés."@fr ,
+                             "This describes how the project is expected to achieve its intended results."@en ;
+                rdfs:label "theory of change"@en ,
+                           "théorie du changement"@fr .
+
+
+###  http://purl.org/pieo#activity
+:activity rdf:type owl:Class ;
+          rdfs:subClassOf :element_chaine_resultats ;
+          rdfs:comment "Actions entreprises ou travaux réalisés par lesquels des intrants, tels que des fonds, une assistance technique et d'autres types de ressources, sont mobilisés pour produire des résultats spécifiques, tels que l'argent dépensé, les manuels scolaires distribués ou le nombre de participants inscrits à un programme d'emploi."@fr ,
+                       "Actions taken or work performed through which inputs, such as funds, technical assistance, and other types of resources, are mobilized to produce specific outputs, such as money spent, textbooks distributed, or number of participants enrolled in an employment program."@en ;
+          rdfs:label "activity"@en ,
+                     "activité"@fr .
+
+
+###  http://purl.org/pieo#but
+:but rdf:type owl:Class .
+
+
+###  http://purl.org/pieo#element_chaine_resultats
+:element_chaine_resultats rdf:type owl:Class ;
+                          rdfs:label "Elements de la chaine de résultats"@fr ,
+                                     "Elements of a Results Chain"@en .
+
+
+###  http://purl.org/pieo#environment
+:environment rdf:type owl:Class .
+
+
+###  http://purl.org/pieo#finalite
+:finalite rdf:type owl:Class .
+
+
+###  http://purl.org/pieo#inputs
+:inputs rdf:type owl:Class ;
+        rdfs:subClassOf :element_chaine_resultats ;
+        rdfs:comment "Les ressources financières, humaines et matérielles utilisées pour l'intervention."@fr ,
+                     "The financial, human, and material resources used for the intervention."@en ;
+        rdfs:label "inputs"@en ,
+                   "intrant"@fr .
+
+
+###  http://purl.org/pieo#macro
+:macro rdf:type owl:Class ;
+       rdfs:subClassOf :environment .
+
+
+###  http://purl.org/pieo#meso
+:meso rdf:type owl:Class ;
+      rdfs:subClassOf :environment .
+
+
+###  http://purl.org/pieo#micro
+:micro rdf:type owl:Class ;
+       rdfs:subClassOf :environment .
+
+
+###  http://purl.org/pieo#objectif
+:objectif rdf:type owl:Class .
+
+
+###  http://purl.org/pieo#stakeholder
+:stakeholder rdf:type owl:Class ;
+             rdfs:label "Partie prenante"@fr ,
+                        "Stakeholder"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/pieo#Cause-and-effect_question
+:Cause-and-effect_question rdf:type owl:NamedIndividual ,
+                                    :QuestionType ;
+                           rdfs:comment "Elle est axée sur l'attribution. Elles demandent quelle est la différence entre l'intervention et les résultats."@fr ,
+                                        "It focuses on attribution. They ask about what difference the intervention makes to outcomes."@en ;
+                           rdfs:label "cause-and-effect question"@en ,
+                                      "question de cause à effet"@fr .
+
+
+###  http://purl.org/pieo#SIRIUS
+:SIRIUS rdf:type owl:NamedIndividual ,
+                 :Program .
+
+
+###  http://purl.org/pieo#SIRIUS_eval
+:SIRIUS_eval rdf:type owl:NamedIndividual ,
+                      :EvaluationApproach ;
+             :evaluate :SIRIUS .
+
+
+###  http://purl.org/pieo#cumulative_data
+:cumulative_data rdf:type owl:NamedIndividual ,
+                          :DataType .
+
+
+###  http://purl.org/pieo#descriptive_question
+:descriptive_question rdf:type owl:NamedIndividual ,
+                               :QuestionType ;
+                      rdfs:comment "Elle pose des questions sur ce qui se passe. Elles portent sur les processus, les conditions, les relations organisationnelles et les points de vue des parties prenantes."@fr ,
+                                   "It asks about what is taking place. They are concerned with processes, conditions, organizational relationships, and stakeholder views."@en ;
+                      rdfs:label "descriptive question"@en ,
+                                 "question descriptive"@fr .
+
+
+###  http://purl.org/pieo#evaluation
+:evaluation rdf:type owl:NamedIndividual ,
+                     :EvaluationType .
+
+
+###  http://purl.org/pieo#ex_ante_simulation
+:ex_ante_simulation rdf:type owl:NamedIndividual ,
+                             :EvaluationType .
+
+
+###  http://purl.org/pieo#impact_evaluation
+:impact_evaluation rdf:type owl:NamedIndividual ,
+                            :EvaluationType .
+
+
+###  http://purl.org/pieo#mixed_method_evaluation
+:mixed_method_evaluation rdf:type owl:NamedIndividual ,
+                                  :EvaluationType .
+
+
+###  http://purl.org/pieo#monitoring
+:monitoring rdf:type owl:NamedIndividual ,
+                     :EvaluationType ;
+            rdfs:comment "Il permet de vérifier si les activités sont mises en œuvre comme prévu. Le suivi est essentiel pour vérifier qu'un bénéficiaire participe effectivement au programme et qu'un non-bénéficiaire n'y participe pas."@fr ,
+                         "It lets verify whether activities are being implemented as planned. Monitoring is critical to checking that a beneficiary actually participates in the program and that a nonbeneficiary does not participate."@en ;
+            rdfs:label "monitoring"@en ,
+                       "suivi (monitoring)"@fr .
+
+
+###  http://purl.org/pieo#normative_question
+:normative_question rdf:type owl:NamedIndividual ,
+                             :QuestionType ;
+                    rdfs:comment """Elle compare ce qui se passe à ce qui devrait se passer.
+Elles permettent d'évaluer les activités et de déterminer si les objectifs sont atteints ou non. Les questions normatives peuvent s'appliquer aux intrants, aux activités et aux produits."""@fr ,
+                                 """It compares what is taking place to what should be  taking place.
+They assess activities and whether or not targets are accomplished. Normative questions can apply to inputs, activities, and outputs."""@en ;
+                    rdfs:label "normative question"@en ,
+                               "question normative"@fr .
+
+
+###  http://purl.org/pieo#process_evaluation
+:process_evaluation rdf:type owl:NamedIndividual ,
+                             :EvaluationType ;
+                    rdfs:label "process evaluation"@en ,
+                               "évaluation des processus"@fr .
+
+
+###  http://purl.org/pieo#qualitative_data
+:qualitative_data rdf:type owl:NamedIndividual ,
+                           :DataType ;
+                  rdfs:comment "Ils ne s'expriment pas par des chiffres, mais plutôt par le biais du langage ou parfois d'images."@fr ,
+                               "They are expressed not in numbers, but rather by means of language or sometimes images."@en ;
+                  rdfs:label "donnée qualitative"@fr ,
+                             "qualitative data"@en .
+
+
+###  http://purl.org/pieo#quantitative_data
+:quantitative_data rdf:type owl:NamedIndividual ,
+                            :DataType ;
+                   rdfs:comment "Il s'agit de mesures numériques et elles sont généralement associées à des échelles ou à des mesures."@fr ,
+                                "They are numerical measurements and are commonly associated with scales or metrics."@en ;
+                   rdfs:label "donnée quantitative"@fr ,
+                              "quantitative data"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :qualitative_data
+                        :quantitative_data
+                      )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
